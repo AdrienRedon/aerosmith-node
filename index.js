@@ -9,7 +9,7 @@ const port = 1337;
 // taking off and landing command
 
 app.post('/takeoff', (request, response) => {
-  HoverController.takeOff();
+  HoverController.takeOffAndHover();
   response.status(200).json({flying: true});
 });
 
