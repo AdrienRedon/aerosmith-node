@@ -18,6 +18,9 @@ app.post('/land', (request, response) => {
   response.status(200).json({landed: true});
 });
 
+app.get('/healthz', (request, response) => {
+  response.status(204).json({});
+});
 
 const server = http.createServer(app);
 IOControler.listen(server);

@@ -1,0 +1,9 @@
+version: "2"
+services:
+  server:
+    build: .
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "1337:1337"
