@@ -18,6 +18,11 @@ app.post('/land', (request, response) => {
   response.status(200).json({landed: true});
 });
 
+app.post('/blink', (request, response) => {
+  HoverControler.blinkLed();
+  response.status(200).json({blink: true});
+});
+
 app.get('/healthz', (request, response) => {
   response.status(204).json({});
 });

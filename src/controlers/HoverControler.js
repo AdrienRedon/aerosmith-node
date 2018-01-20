@@ -19,6 +19,12 @@ class HoverController {
     };
     Control.execute(ref);
   }
+
+  static blinkLed() {
+    console.log('leds blinking');
+
+    Control.blinkLed();
+  }
 }
 
 module.exports = HoverController;
