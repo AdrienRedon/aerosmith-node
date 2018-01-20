@@ -9,7 +9,7 @@ class Control {
   }
 
   static blinkLed() {
-    control.animateLeds()
+    control.animateLeds();
   }
 }
 
