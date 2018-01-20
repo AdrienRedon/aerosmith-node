@@ -28,6 +28,6 @@ app.get('/healthz', (request, response) => {
 });
 
 const server = http.createServer(app);
-IOController.listen(server);
+IOController.listenCommand(server);
 server.listen(port);
 console.log(`Express listening on port ${port}`);

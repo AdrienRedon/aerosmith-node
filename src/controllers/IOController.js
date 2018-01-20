@@ -1,14 +1,15 @@
 const socketIO = require('socket.io');
-const SerialPort = require('serialport').SerialPort;
+const SerialPort = require('serialport');
 const Control = require('../control');
 
+const portName = 'COM3'; // change this to your Arduino port name
 let serialport;
 
 class IOController {
   static listenCommand(server) {
     const io = socketIO.listen(server);
-    serialPort = new SerialPort(portName, {
-	    baudrate: 9600,
+    serialport = new SerialPort(portName, {
+	    baudRate: 9600,
 	    // defaults for Arduino serial communication
 	     dataBits: 8,
 	     parity: 'none',
