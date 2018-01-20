@@ -1,7 +1,7 @@
 const http = require('http');
 const express = require('express');
-const IOControler = require('./src/controlers/IOControler');
-const HoverControler = require('./src/controlers/HoverControler');
+const IOController = require('./src/controllers/IOController');
+const HoverController = require('./src/controllers/HoverController');
 
 const app = express();
 const port = 1337;
@@ -9,17 +9,17 @@ const port = 1337;
 // taking off and landing command
 
 app.post('/takeoff', (request, response) => {
-  HoverControler.takeOff();
+  HoverController.takeOff();
   response.status(200).json({flying: true});
 });
 
 app.post('/land', (request, response) => {
-  HoverControler.land();
+  HoverController.land();
   response.status(200).json({landed: true});
 });
 
 app.post('/blink', (request, response) => {
-  HoverControler.blinkLed();
+  HoverController.blinkLed();
   response.status(200).json({blink: true});
 });
 
@@ -28,6 +28,6 @@ app.get('/healthz', (request, response) => {
 });
 
 const server = http.createServer(app);
-IOControler.listen(server);
+IOController.listen(server);
 server.listen(port);
 console.log(`Express listening on port ${port}`);
