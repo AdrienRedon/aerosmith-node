@@ -1,14 +1,11 @@
+
 const Control = require('../control');
 
 class HoverController {
   static takeOff() {
     console.log('taking off ...');
 
-    const ref = {
-      fly: true,
-      emergency: false,
-    };
-    Control.execute(ref);
+    exec('cat hover | telnet 192.168.1.1');
   }
 
   static land() {
@@ -20,11 +17,6 @@ class HoverController {
     Control.execute(ref);
   }
 
-  static blinkLed() {
-    console.log('leds blinking');
-
-    Control.blinkLed();
-  }
 }
 
 module.exports = HoverController;
