@@ -14,7 +14,6 @@
   "dependencies": {
     "ar-drone": "^0.3.3",
     "express": "^4.16.2",
-    "serialport": "^6.0.4",
     "socket.io": "^2.0.4"
   },
   "devDependencies": {
