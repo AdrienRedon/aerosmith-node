@@ -11,10 +11,7 @@ class HoverController {
   static land() {
     console.log('landing ...');
 
-    const ref = {
-      fly: false,
-    };
-    Control.execute(ref);
+    exec('cat land | telnet 192.168.1.1');
   }
 
 }

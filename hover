@@ -1,1 +1,1 @@
-./spinmotor.sh /dev/ttyO0 1 kill restart
+./spinmotor.sh /dev/ttyO0 5 kill && exit
