@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d app && babel index.js -o app.js",
+    "build": "babel src -d app",
     "start": "node app.js"
   },
   "keywords": [],
