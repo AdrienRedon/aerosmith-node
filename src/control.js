@@ -7,10 +7,6 @@ class Control {
     control.pcmd(pcmd);
     control.flush();
   }
-
-  static blinkLed() {
-    control.animateLeds();
-  }
 }
 
 module.exports = Control;
