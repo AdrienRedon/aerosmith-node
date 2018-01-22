@@ -1,6 +1,3 @@
-
-const Control = require('../control');
-
 class HoverController {
   static takeOff() {
     console.log('taking off ...');
