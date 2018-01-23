@@ -13,10 +13,10 @@ class IOController {
 
       socket.on('command', (data) => {
         data = JSON.parse(data);
+        // data.x and data.y between -75 and 75
         const x = 1450 + data.x * 500/70; // lower value to avoid going too fast 
         const y = 1500 + data.y * 500/75;
 
-        // x and y between -75 and 75
         direction.servoWrite(y);
         speed.servoWrite(x);
 
