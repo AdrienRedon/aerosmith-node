@@ -1,9 +1,11 @@
 # aerosmith-node
 Fhacktory hackathon winter 2018
 
-Server for the raspberry used to: 
+Server running on the raspberry used to: 
 * make the AR drone 2.0 hover and land
 * control the back propeller
+
+![hovercraft](https://i.imgur.com/TSSH6RW.jpg)
 
 ## Installation
 
